@@ -1,0 +1,4 @@
+github.com/chmduquesne/rollinghash v4.0.0+incompatible h1:hnREQO+DXjqIw3rUTzWN7/+Dpw+N5Um8zpKV0JOEgbo=
+github.com/chmduquesne/rollinghash v4.0.0+incompatible/go.mod h1:Uc2I36RRfTAf7Dge82bi3RU0OQUmXT9iweIcPqvr8A0=
+github.com/klauspost/compress v1.15.13 h1:NFn1Wr8cfnenSJSA46lLq4wHCcBzKTSjnBIexDMMOV0=
+github.com/klauspost/compress v1.15.13/go.mod h1:QPwzmACJjUTFsnSHH934V6woptycfrDDJnH7hvFVbGM=
