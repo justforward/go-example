@@ -1,14 +1,6 @@
 package main
 
-import (
-	"compress/gzip"
-	"fmt"
-	"github.com/klauspost/compress/zstd"
-	"io"
-	"os"
-	"time"
-)
-
+/*
 type SizeableWriter struct {
 	Count int
 }
@@ -19,19 +11,23 @@ func (w *SizeableWriter) Write(data []byte) (int, error) {
 }
 
 var (
-	filePath = []string{"/Users/mac/Downloads/STARCCM_test_Blade@00300.sim",
+	filePath = []string{
+		"/Users/mac/Desktop/imei.20190824.01.simac",
+		"/Users/mac/Downloads/STARCCM_test_Blade@00300.sim",
 		"/Users/mac/Desktop/e_10_no_solid_steady_mesh_trim@07500.sim",
 	}
 
 	GZipLevel = []int{
-		-2, //1, //2, 3, 4, 5, 6, 7, 8, 9,
+		1, // 目前程序中使用的压缩算法
+		//-2, 1, //2, 3, 4, 5, 6, 7, 8, 9,
+
 	}
 )
 
 func GZip(r io.Reader, lvl int) (int, error) {
 	var w SizeableWriter
 
-	gw, err := gzip.NewWriterLevel(&w, lvl)
+	gw, err := gzip.NewWriterLevel(&w, gzip.BestSpeed)
 	if err != nil {
 		return 0, err
 	}
@@ -125,4 +121,4 @@ func main() {
 		})
 	}
 
-}
+}*/
