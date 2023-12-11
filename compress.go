@@ -1,6 +1,14 @@
 package main
 
-/*
+import (
+	"compress/gzip"
+	"fmt"
+	"github.com/klauspost/compress/zstd"
+	"io"
+	"os"
+	"time"
+)
+
 type SizeableWriter struct {
 	Count int
 }
@@ -13,6 +21,7 @@ func (w *SizeableWriter) Write(data []byte) (int, error) {
 var (
 	filePath = []string{
 		"/Users/mac/Desktop/imei.20190824.01.simac",
+		"/Users/mac/test/local/xaa",
 		"/Users/mac/Downloads/STARCCM_test_Blade@00300.sim",
 		"/Users/mac/Desktop/e_10_no_solid_steady_mesh_trim@07500.sim",
 	}
@@ -75,7 +84,7 @@ func TimeSpend(r io.Reader) (time.Duration, error) {
 }
 
 func main() {
-	fp, err := os.Open(filePath[0])
+	fp, err := os.Open(filePath[1])
 	if err != nil {
 		panic(err)
 	}
@@ -121,4 +130,4 @@ func main() {
 		})
 	}
 
-}*/
+}
