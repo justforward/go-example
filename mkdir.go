@@ -59,7 +59,7 @@ func getFileInfos(sourcePath string) (map[string][]FileInfos, error) {
 				if readdir.IsDir() {                          // 如果是文件夹，将对应的地址放入到队列中
 					queue.Enqueue(relPath)
 				} else { // 否则将文件加入到数组中
-					result := FileInfos{
+					result := FileInfoss{
 						AbsPath:  filepath.Join(absPath, readdir.Name()),
 						RelPath:  relPath,
 						Size:     readdir.Size(),
@@ -75,7 +75,7 @@ func getFileInfos(sourcePath string) (map[string][]FileInfos, error) {
 	return fileInfoMap, nil
 }
 
-type FileInfos struct {
+type FileInfoss struct {
 	AbsPath  string // 绝对路径
 	RelPath  string // 相对路径 相对前缀来说
 	Size     int64
